@@ -8,6 +8,7 @@ When you download this theme into your wordpress theme directory, make sure to r
  The following JavaScript libraries are included in this theme:
  
   •	VelocityJS
+  
   •	Blast Text
   •	Detect Mobile Browser
   •	Html5shiv
