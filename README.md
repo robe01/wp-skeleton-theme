@@ -22,11 +22,13 @@ When you download this theme into your wordpress theme directory, make sure to r
   •	Respond-minmax
 
 
+
 The following CSS libraries are included in this theme:
 
   •	Twitter Bootstrap
   
   •	Font Awesome
+
 
 
 This theme has the basic pages:
@@ -40,6 +42,7 @@ This theme has the basic pages:
   •	Functions
   
   •	404
+
 
 
 Enjoy and leave any feedback you may have.
