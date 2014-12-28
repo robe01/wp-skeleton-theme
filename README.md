@@ -44,5 +44,4 @@ This theme has the basic pages:
   •	404
 
 
-
-Enjoy and leave any feedback you may have.
+If you're not using netbeans ide, then delete the nbproject folder when you download this repo. Enjoy and leave any feedback you may have.
