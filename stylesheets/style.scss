@@ -1,21 +1,21 @@
 /*
-Theme Name: 
-Author: 
-Author URI: 
-Description:
-Version: 
-Tags: 
+Theme Name: WordPress template
+Author: Robert Liverpool
+Author URI: www.robertliverpool.com
+Description: 
+Version: 1.0
+Tags: Responsive, SASS, GruntJS, Bower, WordPress
 */
 
 
-@import "config/color";
-@import "config/font";
-@import "config/resets";
+@import "base/color";
+@import "base/font";
+@import "base/resets";
 
 @import "layout/header";
 @import "layout/main";
 @import "layout/footer";
 
-@import "partials/buttons";
+@import "module/buttons";
 
 
