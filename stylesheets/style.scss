@@ -1,4 +1,4 @@
-/*
+/*!
 Theme Name: WordPress template
 Author: Robert Liverpool
 Author URI: www.robertliverpool.com
@@ -11,6 +11,7 @@ Tags: Responsive, SASS, GruntJS, Bower, WordPress
 @import "base/color";
 @import "base/font";
 @import "base/resets";
+@import "base/wp-url";
 
 @import "layout/header";
 @import "layout/main";

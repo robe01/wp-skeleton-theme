@@ -1,0 +1,94 @@
+@import "compass/css3/transition";
+@import "compass/css3/transform";
+@import "compass/css3/animation";
+@import "compass/css3/box-shadow";
+@import "compass/css3/opacity";
+@import "compass/css3/border-radius";
+
+//Hollow button base mixin
+
+@mixin my-css-hollow-btn-base(){
+    
+    .my-css-hollow-btn{
+        padding: 10px 30px 10px 30px;
+        background: transparent;
+        font-weight: bold;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        text-align:center;
+        cursor: pointer;
+        position: absolute;
+        top: 30px;
+        right: 20px;
+        @include border-radius(3px);
+    }
+
+    .my-css-hollow-btn:hover{
+        text-decoration: none;
+        letter-spacing: 0;
+    }
+
+    .my-css-hollow-btn::before{
+        padding-top: 10px;
+        text-align: center;
+        letter-spacing: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        @include opacity(0);
+    }
+}
+
+//Hollow button style mixin
+
+@mixin my-css-hollow-btn-style($name, $colour: white, $font-size: 20px, $font-family: arial, $width: 220px, $btn-text-2: "Insert Text"){
+    
+    .my-css-hollow-btn-style-#{$name}{
+        font-family: $font-family;
+        border: solid $colour 4px;
+        font-size: $font-size;
+        color: $colour;
+        width: $width;
+        @include transition(all,0.3s,ease-in-out);
+    }
+
+    .my-css-hollow-btn-style-#{$name}:hover{
+        color: $colour;
+        border: solid $colour 4px;
+        @include box-shadow($colour 0 0 15px);
+    }
+
+    .my-css-hollow-btn-style-#{$name}::before{
+        content: $btn-text-2;
+    }
+
+    //These animation classes need to be add via javascript on click event.
+
+    .my-css-hollow-btn-style-#{$name}:active span{
+        @include animation(buttonText1 0.3s ease-in-out forwards 0.3s);    
+    }
+
+    .my-css-hollow-btn-style-#{$name}:active::before{
+        @include animation(buttonText2 0.4s ease-in-out forwards 0.4s);
+    }
+
+    @include keyframes(buttonText1){
+        100%{
+            @include opacity(0);
+        } 
+    }
+
+    @include keyframes(buttonText2){
+        100%{
+            @include opacity(1);
+            letter-spacing: 5px;
+            color: $colour;
+        }
+    }
+    //--------------------------------------------------------------------->
+}
+
+@include my-css-hollow-btn-base();
+@include my-css-hollow-btn-style("default",$btn-text-2: "Awesome");
