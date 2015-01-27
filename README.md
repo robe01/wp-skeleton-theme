@@ -43,5 +43,7 @@ This theme has the basic pages:
   •	Functions
   
   •	404
+  
+  •	single  
 
 If you're not using netbeans ide, then delete the nbproject folder when you download this repo. Enjoy and leave any feedback you may have.
